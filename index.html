@@ -11,8 +11,8 @@
             <header id='navbar'>
                 <a href="#" class="logo">Hair <span>by superkate!</span></a>
                 <ul>
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="bookings.html">Bookings</a></li>
+                    <li><a href="#" onclick="firstSlide();firstSlideText();menuToggle();" class="active">Home</a></li>
+                    <li><a href="#" onclick="lastSlide();lastSlideText();menuToggle();">Bookings</a></li>
                 </ul>
                 <span class="menuIcon" onclick="menuToggle()"></span>
             </header>
@@ -89,6 +89,16 @@
             slides[index].classList.remove('active');
             index = (index - 1 + slides.length) % slides.length;
             slides[index].classList.add('active');
+          }  
+          function firstSlide(){
+            slides[index].classList.remove('active');
+            index = 0;
+            slides[index].classList.add('active');
+          }
+          function lastSlide(){
+            slides[index].classList.remove('active');
+            index = slides.length - 1;
+            slides[index].classList.add('active');
           }
 
           var slideshowText = document.getElementById('slideshowText');
@@ -104,6 +114,16 @@
             slidesText[i].classList.remove('active');
             i = (i - 1 + slidesText.length) % slidesText.length;
             slidesText[i].classList.add('active');
+          }
+          function firstSlideText(){
+            slidesText[i].classList.remove('active');
+            i = 0;
+            slidesText[i].classList.add('active');
+          }
+          function lastSlideText(){
+            slidesText[i].classList.remove('active');
+            i = slidesText.length-1
+            slidesText[index].classList.add('active');
           }
           function menuToggle(){
             var nav = document.getElementById('navbar')

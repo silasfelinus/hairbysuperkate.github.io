@@ -116,7 +116,7 @@ header ul li a:before
 }
 header ul li a:hover:before
 {
-    width: 40px;
+    width: 100%;
 }
 .content
 {
@@ -315,8 +315,8 @@ header ul li a:hover:before
     font-size: 36px;
   }
 
-  header ul li a:hover:before,
-  header ul li a.active:before
+  header ul li a:hover:before
+  #header ul li a.active:before
   {
     width: 100%;
   }

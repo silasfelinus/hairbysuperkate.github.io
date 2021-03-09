@@ -9,14 +9,14 @@
     --default_color_3:  #919388;
     --default_color_4: yellow;
     /*Side Banner*/
-    --side_banner_color: var(--default_color_1);
+    --side_banner_color: var(--default_color_3);
     /*Logo*/
     --logo_color_1: var(--default_color_1);
     --logo_color_2: var(--default_color_2);
     /*Links*/
     --link_color_1: var(--default_color_1);
-    --link_color_2: var(--default_color_2);
-    --splash_color: var(--default_color_3);
+    --link_color_2: var(--default_color_1);
+    --splash_color: var(--default_color_2);
     /*Text*/
     --text_color_1: var(--default_color_1);
     --text_color_2: var(--default_color_2);
@@ -37,7 +37,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 320px;
+    width: 25%;
     height: 100%;
     background: var(--side_banner_color);
     z-index: -2;
@@ -128,7 +128,7 @@ header ul li a:hover:before
 .content .bannerText
 {
   position: relative;
-  max-width: 800px;
+  max-width: 500px;
   margin-right: 50px;
 }
 .content .bannerText div
@@ -164,7 +164,7 @@ header ul li a:hover:before
   letter-spacing: 1px;
   font-size: 18px;
   text-decoration: none;
-  padding-left: 15px
+  padding-left: 15px;
 }
 .content .bannerText a:before
 {
@@ -172,7 +172,7 @@ header ul li a:hover:before
   position: absolute;
   top: 0;
   left: 0;
-  width: 70px;
+  width: 60px;
   height: 100%;
   background: var(--splash_color);
   z-index: -1;
@@ -185,7 +185,7 @@ header ul li a:hover:before
 .content .bannerImg
 {
   position: relative;
-  width: 440px;
+  width: 550px;
   height: 440px;
   background: var(--background_logo_color);
 }
@@ -196,7 +196,7 @@ header ul li a:hover:before
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
   transition: 0.5s;
   opacity: 0;
 }
@@ -236,6 +236,7 @@ header ul li a:hover:before
 {
   list-style: none;
   margin-left: 20px;
+  margin-top: 10px;
   cursor: pointer;
   filter: invert(1);
   transition: 0.5s ease-in-out;
@@ -263,7 +264,8 @@ header ul li a:hover:before
   {
     padding: 0;
   }
-  .icons .controls li {
+  .icons .controls li 
+  {
     filter: invert(0);
   }
   .content .bannerText h2
@@ -296,8 +298,11 @@ header ul li a:hover:before
     height: 100vh;
     background: #fff;
     z-index: 10000;
-    display: initial;
     padding: 100px 0;
+  }
+  header.active ul
+  {
+    display: initial;
   }
   header ul li
   {
@@ -331,11 +336,11 @@ header ul li a:hover:before
   }
   header.active .menuIcon
   {
-    background: #fff url(close.png);
+    background: #fff url("../images/close.png");
     background-repeat: no-repeat;
     background-position: 6px;
   }
-}
+} 
 @media (max-width: 767px)
 {
   .container

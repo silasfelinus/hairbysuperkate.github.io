@@ -8,12 +8,11 @@
     </head>
     <body>
         <div class="container">
-            <header class="active" id='navbar'>
+            <header id='navbar'>
                 <a href="#" class="logo">Hair <span>by superkate!</span></a>
                 <ul>
                     <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#">Color</a></li>
-                    <li><a href="#">Bookings</a></li>
+                    <li><a href="bookings.html">Bookings</a></li>
                 </ul>
                 <span class="menuIcon" onclick="menuToggle()"></span>
             </header>
@@ -28,7 +27,7 @@
                           I love colorful hair most of all!<br>
                           I would probably love to work on your hair.<br>
                           Email me and we can talk about how we can<br>
-                          make your dream hair a reality.
+                          make your dream hair a reality. 
                         </p>
                         <a href="mailto:superkate@gmail.com">Email superkate!</a>
                     </div>
@@ -107,7 +106,7 @@
             slidesText[i].classList.add('active');
           }
           function menuToggle(){
-            var nav = document.getElementbyId('navbar')
+            var nav = document.getElementById('navbar')
             nav.classList.toggle('active')
           }
         </script>

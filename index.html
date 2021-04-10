@@ -1,155 +1,195 @@
-<?php
-
-
-if($_POST["message"]) {
-
-
-mail("silasfelinus@gmail.com+email", "Here is the subject line",
-
-
-$_POST["insert your message here"]. "From: an@email.address");
-
-
-}
-
-
-?>
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Hair by superkate!</title>
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-        <div class="container">
-            <header id='navbar'>
-                <a href="#" class="logo">Hair <span>by superkate!</span></a>
-                <ul>
-                    <li><a href="#" onclick="firstSlide();firstSlideText();menuToggle();" class="active">Home</a></li>
-                    <li><a href="#" onclick="lastSlide();lastSlideText();menuToggle();">Bookings</a></li>
-                </ul>
-                <span class="menuIcon" onclick="menuToggle()"></span>
-            </header>
-            <div class="content">
-                <div class="bannerText" id="slideshowText">
-                    <div class="active">
-                        <h2> 
-                          Hair by superkate!<br>
-                        </h2>
-                        <p>
-                          I love to work on hair.<br>
-                          I love colorful hair most of all!<br>
-                          I would probably love to work on your hair.<br>
-                          Email me and we can talk about how we can<br>
-                          make your dream hair a reality. 
-                        </p>
-                        <a href="mailto:superkate@gmail.com">Email superkate!</a>
-                    </div>
-                    <div>
-                        <h2>
-                          Education<br>
-                        </h2>
-                        <p>
-                            In January of 2021, I graduated from  <br>
-                            Frederick and Charles Beauty School<br>
-                            where they encouraged me to explore my passion<br>
-                            (bordering on obsession)<br>
-                            for colorful hair.<br>
-                        </p>
-                        <a href="mailto:superkate@gmail.com">Email superkate!</a>
-                    </div>
-                    <div>
-                      <h2> 
-                        Contact superkate!<br>
-                      </h2>
-                      <p>
-                        Interesting in hearing more about <br>
-                        the world of superkate? <br>
-                        Join our mailing list: <br>
-                        <form method="post" action="yes_please.php">
-                            <textarea name="email"></textarea>
-                            <input type="submit">
-                        </form>
 
-                        <br>
-                      </p>
-                      <a href="mailto:superkate@gmail.com">Email superkate!</a>
-                    </div>
-                </div>
-                <div class="bannerImg" id="slideshow">
-                    <img src="images\stock1.jpg" class="active">
-                    <img src="images\stock2.jpg">
-                    <img src="images\stock3.jpg">
-                </div>
-            </div>
-            <div class="icons">
-              <ul class="social_media">
-                <li><a href="https://www.facebook.com/rainbowsbysuperkate/"><img src="images/facebook_logo.png"></a></li>
-                <li><a href="https://twitter.com/superkate999"><img src="images/twitter_logo.png"></a></li>
-                <li><a href="https://www.instagram.com/hairbysuperkate/"><img src="images/instagram_logo.png"></a></li>
-              </ul>
-              <ul class="controls">
-                <li><a><img src="images/back_arrow.png" onclick="prevSlide();prevSlideText();"></a></li>
-                <li><a><img src="images/front_arrow.png" onclick="nextSlide();nextSlideText();"></a></li>
-              </ul>
-            </div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hair by superkate!</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <header id='navbar'>
+      <a href="#" class="logo">Hair <span>by superkate!</span></a>
+      <ul>
+        <li><a href="#" onclick="firstSlide();firstSlideText();menuToggle();" class="active">Home</a></li>
+        <li><a href="#" onclick="lastSlide();lastSlideText();menuToggle();">Bookings</a></li>
+      </ul>
+      <span class="menuIcon" onclick="menuToggle()"></span>
+    </header>
+    <div class="content">
+      <div class="bannerText" id="slideshowText">
+        <div class="active">
+          <h2>
+            Hair by superkate!<br>
+          </h2>
+          <p>
+            I love to work on hair.<br>
+            I love colorful hair most of all!<br>
+            I would probably love to work on your hair.<br>
+            Email me and we can talk about how we can<br>
+            make your dream hair a reality.
+          </p>
+          <a href="mailto:superkate@gmail.com">Email superkate!</a>
         </div>
-        <script type="text/javascript">
-          var slideshow = document.getElementById('slideshow');
-          var slides = slideshow.getElementsByTagName('img');
-          var index = 0;
+        <div>
+          <h2>
+            Education<br>
+          </h2>
+          <p>
+            In January of 2021, I graduated from <br>
+            Frederick and Charles Beauty School<br>
+            where they encouraged me to explore my passion<br>
+            (bordering on obsession)<br>
+            for colorful hair.<br>
+          </p>
+          <a href="mailto:superkate@gmail.com">Email superkate!</a>
+        </div>
+        <div>
+          <h2>
+            Contact superkate!<br>
+          </h2>
+          <p>
+            Interesting in hearing more about <br>
+            the world of superkate? <br>
+            Join our mailing list: <br>
+          <div class="alert alert-success" role="alert" id="succ">
+            <p id="txt">
+              <strong>Success!</strong> You have been signed up successfully!
+            </p>
+          </div>
 
-          function nextSlide(){
-            slides[index].classList.remove('active');
-            index = (index + 1) % slides.length;
-            slides[index].classList.add('active');
-          }
-          function prevSlide(){
-            slides[index].classList.remove('active');
-            index = (index - 1 + slides.length) % slides.length;
-            slides[index].classList.add('active');
-          }  
-          function firstSlide(){
-            slides[index].classList.remove('active');
-            index = 0;
-            slides[index].classList.add('active');
-          }
-          function lastSlide(){
-            slides[index].classList.remove('active');
-            index = slides.length - 1;
-            slides[index].classList.add('active');
-          }
+          <div class="alert " role="alert" id="fail">
+            <p id="txt">
+              <strong>Sorry!</strong> You have entered an invalid E-mail.
+            </p>
+          </div>
+          <br>
+          <br>
 
-          var slideshowText = document.getElementById('slideshowText');
-          var slidesText = slideshowText.getElementsByTagName('div');
-          var i = 0;
+          <form id="emailForm">
+            <div class="form">
+              <input type="email" name="email_add"><span class="highlight"></span><span class="bar"></span>
+              <label>Email</label>
+            </div>
 
-          function nextSlideText(){
-            slidesText[i].classList.remove('active');
-            i = (i + 1) % slidesText.length;
-            slidesText[i].classList.add('active');
-          }
-          function prevSlideText(){
-            slidesText[i].classList.remove('active');
-            i = (i - 1 + slidesText.length) % slidesText.length;
-            slidesText[i].classList.add('active');
-          }
-          function firstSlideText(){
-            slidesText[i].classList.remove('active');
-            i = 0;
-            slidesText[i].classList.add('active');
-          }
-          function lastSlideText(){
-            slidesText[i].classList.remove('active');
-            i = slidesText.length-1
-            slidesText[index].classList.add('active');
-          }
-          function menuToggle(){
-            var nav = document.getElementById('navbar')
-            nav.classList.toggle('active')
-          }
-        </script>
-    </body>
+            <button value="submit" type="button" class="button buttonBlue" value="submit_button" id="sub"
+              onclick="saveToFirebase()">We're awesome!
+            </button>
+
+          </form>
+
+          <br>
+          </p>
+          <a href="mailto:superkate@gmail.com">Email superkate!</a>
+        </div>
+      </div>
+      <div class="bannerImg" id="slideshow">
+        <img src="images\stock1.jpg" class="active">
+        <img src="images\stock2.jpg">
+        <img src="images\stock3.jpg">
+      </div>
+    </div>
+    <div class="icons">
+      <ul class="social_media">
+        <li><a href="https://www.facebook.com/rainbowsbysuperkate/"><img src="images/facebook_logo.png"></a></li>
+        <li><a href="https://twitter.com/superkate999"><img src="images/twitter_logo.png"></a></li>
+        <li><a href="https://www.instagram.com/hairbysuperkate/"><img src="images/instagram_logo.png"></a></li>
+      </ul>
+      <ul class="controls">
+        <li><a><img src="images/back_arrow.png" onclick="prevSlide();prevSlideText();"></a></li>
+        <li><a><img src="images/front_arrow.png" onclick="nextSlide();nextSlideText();"></a></li>
+      </ul>
+    </div>
+  </div>
+  <script type="text/javascript">
+    var slideshow = document.getElementById('slideshow');
+    var slides = slideshow.getElementsByTagName('img');
+    var index = 0;
+
+    function nextSlide() {
+      slides[index].classList.remove('active');
+      index = (index + 1) % slides.length;
+      slides[index].classList.add('active');
+    }
+    function prevSlide() {
+      slides[index].classList.remove('active');
+      index = (index - 1 + slides.length) % slides.length;
+      slides[index].classList.add('active');
+    }
+    function firstSlide() {
+      slides[index].classList.remove('active');
+      index = 0;
+      slides[index].classList.add('active');
+    }
+    function lastSlide() {
+      slides[index].classList.remove('active');
+      index = slides.length - 1;
+      slides[index].classList.add('active');
+    }
+
+    var slideshowText = document.getElementById('slideshowText');
+    var slidesText = slideshowText.getElementsByTagName('div');
+    var i = 0;
+
+    function nextSlideText() {
+      slidesText[i].classList.remove('active');
+      i = (i + 1) % slidesText.length;
+      slidesText[i].classList.add('active');
+    }
+    function prevSlideText() {
+      slidesText[i].classList.remove('active');
+      i = (i - 1 + slidesText.length) % slidesText.length;
+      slidesText[i].classList.add('active');
+    }
+    function firstSlideText() {
+      slidesText[i].classList.remove('active');
+      i = 0;
+      slidesText[i].classList.add('active');
+    }
+    function lastSlideText() {
+      slidesText[i].classList.remove('active');
+      i = slidesText.length - 1
+      slidesText[index].classList.add('active');
+    }
+    function menuToggle() {
+      var nav = document.getElementById('navbar')
+      nav.classList.toggle('active')
+    }
+    function saveToFirebase() {
+      const data = document.getElementById('emailForm').elements[0].value;
+      if (ValidateEmail(data)) {
+        database.ref('emails').push({ email: data }).then(function (snapshot) {
+          pass(); // some success method
+        }, function (error) {
+          console.log('error' + error);
+          fail(); // some error method
+        });
+        document.getElementById('frm1').reset();
+      }
+    }
+
+    function ValidateEmail(mail) {
+      if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mail)) {
+        pass();
+        return (true);
+      }
+      else {
+        fail();
+        return (false);
+      }
+    }
+
+
+    function fail() {
+      $('#fail').finish().show().delay(1000).fadeOut(6000);
+    }
+    
+    function pass() {
+      $('#succ').finish().show().delay(1000).fadeOut(6000);
+    }
+  </script>
+</body>
+
 </html>

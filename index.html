@@ -1,3 +1,19 @@
+<?php
+
+
+if($_POST["message"]) {
+
+
+mail("silasfelinus@gmail.com+email", "Here is the subject line",
+
+
+$_POST["insert your message here"]. "From: an@email.address");
+
+
+}
+
+
+?>
 <!doctype html>
 <html>
     <head>
@@ -49,10 +65,15 @@
                         Contact superkate!<br>
                       </h2>
                       <p>
+                        Interesting in hearing more about <br>
+                        the world of superkate? <br>
+                        Join our mailing list: <br>
+                        <form method="post" action="yes_please.php">
+                            <textarea name="email"></textarea>
+                            <input type="submit">
+                        </form>
+
                         <br>
-                        until I complete my state board <br>
-                        and licensing requirements<br>
-                        (though I happily accept donations)<br><br>
                       </p>
                       <a href="mailto:superkate@gmail.com">Email superkate!</a>
                     </div>

@@ -1,0 +1,41 @@
+[33mcommit a3d06183c8c2be6e659ac4db3a79a888c4b1aff5[m[33m ([m[1;32mtest[m[33m)[m
+Author: Silas M Knight <silasfelinus@gmail.com>
+Date:   Sat Apr 10 18:02:38 2021 -0700
+
+    form processing through formspree
+
+[33mcommit 4ab981be8366999fdb4254b2321ca2bc097f51c4[m
+Author: Silas M Knight <silasfelinus@gmail.com>
+Date:   Sat Apr 10 17:55:36 2021 -0700
+
+    basic form created, need to add processing
+
+[33mcommit ae22a58fe531589284a3516e771edc24e4fd7251[m
+Author: Silas M Knight <silasfelinus@gmail.com>
+Date:   Sat Apr 10 00:12:56 2021 -0700
+
+    added missing background value
+
+[33mcommit 73cb3c4625ede8090a1125214b391bf46f981a0e[m[33m ([m[1;31mtest/test[m[33m)[m
+Author: Silas M Knight <silasfelinus@gmail.com>
+Date:   Sat Apr 10 00:08:07 2021 -0700
+
+    added semicolon
+
+[33mcommit 131a787b7eca909cca8db1da3e828c46d6c9433c[m
+Author: Silas M Knight <silasfelinus@gmail.com>
+Date:   Fri Apr 9 23:49:05 2021 -0700
+
+    javascript form, need to rework frames
+
+[33mcommit 126bf77c9610253e2a918fe13a7449a4714ce2ac[m
+Author: Silas M Knight <silasfelinus@gmail.com>
+Date:   Fri Apr 9 23:12:40 2021 -0700
+
+    beginning php
+
+[33mcommit b97def2dc18be47ef4c371446f3f0b2722639cb6[m
+Author: Silas M Knight <silasfelinus@gmail.com>
+Date:   Fri Apr 9 22:46:42 2021 -0700
+
+    begin work on email collector

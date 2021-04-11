@@ -6,6 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hair by superkate!</title>
   <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LK7CR8PPLX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LK7CR8PPLX');
+</script>
 </head>
 
 <body>
@@ -13,7 +23,7 @@
     <header id='navbar'>
       <a href="#" class="logo">Hair <span>by superkate!</span></a>
       <ul>
-        <li><a href="#" onclick="firstSlide();menuToggle();" class="active">Home</a></li>
+        <li><a href="#" onclick="menuToggle();" class="active">Home</a></li>
         <li><a href="https://www.instagram.com/hairbysuperkate/">Instagram</a></li>
       </ul>
       <span class="menuIcon" onclick="menuToggle()"></span>
@@ -43,9 +53,8 @@
         </div>
       </div>
       <div class="bannerImg" id="slideshow">
-        <img src="images\stock1.jpg" class="active">
-        <img src="images\stock2.jpg">
-        <img src="images\stock3.jpg">
+
+        
       </div>
     </div>
     <div class="icons">
@@ -54,47 +63,9 @@
         <li><a href="https://twitter.com/superkate999"><img src="images/twitter_logo.png"></a></li>
         <li><a href="https://www.instagram.com/hairbysuperkate/"><img src="images/instagram_logo.png"></a></li>
       </ul>
-      <ul class="controls">
-        <li><a><img src="images/back_arrow.png" onclick="prevSlide()"></a></li>
-        <li><a><img src="images/front_arrow.png" onclick="nextSlide()"></a></li>
-      </ul>
     </div>
   </div>
-  <script type="text/javascript">
-    var slideshow = document.getElementById('slideshow');
-    var slides = slideshow.getElementsByTagName('img');
-    var index = 0;
 
-    function nextSlide() {
-      slides[index].classList.remove('active');
-      index = (index + 1) % slides.length;
-      slides[index].classList.add('active');
-    }
-    function prevSlide() {
-      slides[index].classList.remove('active');
-      index = (index - 1 + slides.length) % slides.length;
-      slides[index].classList.add('active');
-    }
-    function firstSlide() {
-      slides[index].classList.remove('active');
-      index = 0;
-      slides[index].classList.add('active');
-    }
-    function lastSlide() {
-      slides[index].classList.remove('active');
-      index = slides.length - 1;
-      slides[index].classList.add('active');
-    }
-
-    var slideshowText = document.getElementById('slideshowText');
-    var i = 0;
-
-    function menuToggle() {
-      var nav = document.getElementById('navbar')
-      nav.classList.toggle('active')
-    }
-
-  </script>
 </body>
 
 </html>

@@ -13,76 +13,33 @@
     <header id='navbar'>
       <a href="#" class="logo">Hair <span>by superkate!</span></a>
       <ul>
-        <li><a href="#" onclick="firstSlide();firstSlideText();menuToggle();" class="active">Home</a></li>
-        <li><a href="#" onclick="lastSlide();lastSlideText();menuToggle();">Bookings</a></li>
+        <li><a href="#" onclick="firstSlide();menuToggle();" class="active">Home</a></li>
+        <li><a href="https://www.instagram.com/hairbysuperkate/">Instagram</a></li>
       </ul>
       <span class="menuIcon" onclick="menuToggle()"></span>
     </header>
     <div class="content">
       <div class="bannerText" id="slideshowText">
-        <div class="active">
-          <h2>
-            Hair by superkate!<br>
-          </h2>
+        <div class="active">   
+          <h2>Licensed Barber and Colorist</h2>
+          <h5>(fully vaccinated in May) </h5><br>
+
           <p>
-            I love to work on hair.<br>
-            I love colorful hair most of all!<br>
-            I would probably love to work on your hair.<br>
-            Email me and we can talk about how we can<br>
-            make your dream hair a reality.
-          </p>
-          <a href="mailto:superkate@gmail.com">Email superkate!</a>
-        </div>
-        <div>
-          <h2>
-            Education<br>
-          </h2>
-          <p>
-            In January of 2021, I graduated from <br>
-            Frederick and Charles Beauty School<br>
-            where they encouraged me to explore my passion<br>
-            (bordering on obsession)<br>
-            for colorful hair.<br>
-          </p>
-          <a href="mailto:superkate@gmail.com">Email superkate!</a>
-        </div>
-        <div>
-          <h2>
-            Contact superkate!<br>
-          </h2>
-          <p>
-            Interesting in hearing more about <br>
-            the world of superkate? <br>
-            Join our mailing list: <br>
-          <div class="alert alert-success" role="alert" id="succ">
-            <p id="txt">
-              <strong>Success!</strong> You have been signed up successfully!
-            </p>
-          </div>
+          I'm currently setting up my studio near Old Town in Eureka, CA! <br><br>
+          If you would like to be contacted for an appointment when my books open please let me know: <br></p>
 
-          <div class="alert " role="alert" id="fail">
-            <p id="txt">
-              <strong>Sorry!</strong> You have entered an invalid E-mail.
-            </p>
-          </div>
-          <br>
-          <br>
-
-          <form id="emailForm">
-            <div class="form">
-              <input type="email" name="email_add"><span class="highlight"></span><span class="bar"></span>
-              <label>Email</label>
-            </div>
-
-            <button value="submit" type="button" class="button buttonBlue" value="submit_button" id="sub"
-              onclick="saveToFirebase()">We're awesome!
-            </button>
-
+          <form id="emailForm" action="saveToFirebase()">
+            <label for="wonderful_person">Name</label><br>
+            <input type="text" name="wonderful_person" id="wonderful_person"><br>
+            <label for="happy_email">Email</label><br>
+            <input type="text" name="happy_email" id="happy_email"><br>
+            <label for="friendly_phone">Phone</label><br>
+            <input type="text" name="friendly_phone" id="friendly_phone"><br>
+            <label for="services_desired">Service(s) Desired</label><br>
+            <textarea name="services_desired" id="services_desired" rows="2" columns="1"></textarea><br><br>
+            <input type="submit" value="Hit Me Up!" id="beautiful_button">
           </form>
 
-          <br>
-          </p>
-          <a href="mailto:superkate@gmail.com">Email superkate!</a>
         </div>
       </div>
       <div class="bannerImg" id="slideshow">
@@ -98,8 +55,8 @@
         <li><a href="https://www.instagram.com/hairbysuperkate/"><img src="images/instagram_logo.png"></a></li>
       </ul>
       <ul class="controls">
-        <li><a><img src="images/back_arrow.png" onclick="prevSlide();prevSlideText();"></a></li>
-        <li><a><img src="images/front_arrow.png" onclick="nextSlide();nextSlideText();"></a></li>
+        <li><a><img src="images/back_arrow.png" onclick="prevSlide()"></a></li>
+        <li><a><img src="images/front_arrow.png" onclick="nextSlide()"></a></li>
       </ul>
     </div>
   </div>
@@ -130,33 +87,14 @@
     }
 
     var slideshowText = document.getElementById('slideshowText');
-    var slidesText = slideshowText.getElementsByTagName('div');
     var i = 0;
 
-    function nextSlideText() {
-      slidesText[i].classList.remove('active');
-      i = (i + 1) % slidesText.length;
-      slidesText[i].classList.add('active');
-    }
-    function prevSlideText() {
-      slidesText[i].classList.remove('active');
-      i = (i - 1 + slidesText.length) % slidesText.length;
-      slidesText[i].classList.add('active');
-    }
-    function firstSlideText() {
-      slidesText[i].classList.remove('active');
-      i = 0;
-      slidesText[i].classList.add('active');
-    }
-    function lastSlideText() {
-      slidesText[i].classList.remove('active');
-      i = slidesText.length - 1
-      slidesText[index].classList.add('active');
-    }
+
     function menuToggle() {
       var nav = document.getElementById('navbar')
       nav.classList.toggle('active')
     }
+
     function saveToFirebase() {
       const data = document.getElementById('emailForm').elements[0].value;
       if (ValidateEmail(data)) {

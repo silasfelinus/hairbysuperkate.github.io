@@ -141,11 +141,20 @@ header ul li a:hover:before
 }
 .content .bannerText h2
 {
-  font-size: 54px;
+  font-size: 24px;
   text-transform: uppercase;
   font-weight: 800;
   line-height: 1.2em;
   color: var(--text_color_1);
+  text-align: center;
+}
+.content .bannerText h5
+{
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.2em;
+  color: var(--text_color_1);
+  text-align: center;
 }
 .content .bannerText p
 {
@@ -356,14 +365,6 @@ header ul li a:hover:before
     max-width: 40px;
   }
 }
-form {
-  width: 380px;
-  margin: 4em auto;
-  padding: 3em 2em 2em 2em;
-  background: #fafafa;
-  border: 1px solid #ebebeb;
-  box-shadow: rgba(0,0,0,0.14902) 0px 1px 1px 0px,rgba(0,0,0,0.09804) 0px 1px 2px 0px;
-}
 .group { 
   position: relative; 
   margin-bottom: 45px; 
@@ -371,15 +372,16 @@ form {
 
 input {
   font-size: 18px;
-  padding: 10px 10px 10px 5px;
-  -webkit-appearance: none;
-  display: block;
-  background: #db1616;
-  color: #4e9c46;
-  width: 100%;
-  border: none;
-  border-radius: 0;
-  border-bottom: 1px solid #757575;
+  color:  var(--text_color_2);
+  margin-bottom: 10px; 
+  width: 50%;
+}
+
+textarea {
+  font-size: 18px;
+  color:  var(--text_color_2);
+  height: 100px;
+  width: 50%;
 }
 
 input:focus { outline: none; }
@@ -387,15 +389,13 @@ input:focus { outline: none; }
 /* Label */
 
 label {
-  color: rgb(241, 87, 216); 
+  color:  var(--text_color_3);
   font-size: 15px;
   font-weight: normal;
-  position: absolute;
-  pointer-events: none;
   left: 5px;
   top: -15px;
-  transition: all 0.2s ease;
 }
+
 
 
 /* Button */
@@ -404,18 +404,18 @@ label {
   position: relative;
   display: inline-block;
   padding: 12px 24px;
-  margin: .3em 0 1em 0;
+  margin: 5em 5em 5em 5em;
   width: 100%;
   vertical-align: middle;
-  color: #004345;
+  color:  var(--text_color_1);
   font-size: 16px;
   line-height: 20px;
   -webkit-font-smoothing: antialiased;
   text-align: center;
   letter-spacing: 1px;
   background: transparent;
-  border: 2px solid #004345;
-  border-bottom: 2px solid #004345;
+  border: 2px solid var(--text_color_2);
+  border-bottom: 2px solid  var(--text_color_3);
   cursor: pointer;
   border-radius: 5px;
   transition: all 0.15s ease;
@@ -425,41 +425,12 @@ label {
 
 /* Button modifiers */
 
-.buttonBlue {
-  background:  #ff9999;
-  text-shadow: 1px 1px 0 rgba(39, 110, 204, .5);
+.button {
+  background:  var(--text_color_1);
+  text-shadow: 1px 1px 0  var(--text_color_2);
 }
 
-.buttonBlue:hover { background: #004345;
-color: #fff;}
+.button:hover {
+   background:   var(--text_color_3);
+}
 
-
-#succ {
-  display: none;
-  background-color: #dff0d8;
-  border: 2px solid #dff0d8;
-  border-radius: 5px;  
-  height:40px;
-  text-align:left;
-  top:25%;
-  position: relative;
-  color: #3c763d;
-  margin-left:15px;
-}
-#txt{
-  margin-left:15px;
-  margin-top:0%;
-  
-}
-#fail {
-  display: none;
-  background-color: #ff9999;
-  border: 2px solid #ff9999;
-  border-radius: 5px;  
-  height:40px;
-  text-align:left;
-  top:50%;
-  position: relative;
-  color: #9F0303;
-  margin-left:15px;
-}

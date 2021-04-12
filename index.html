@@ -1,120 +1,122 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hair by superkate!</title>
+    <link rel="stylesheet" href="css/style.css" />
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hair by superkate!</title>
-  <link rel="stylesheet" href="css/style.css">
+    <!-- Slick -->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
 
-  <!-- Instafeed -->
-  <script src='https://ig.instant-tokens.com/users/83285186-a7f7-425b-b444-219f40f98f9a/instagram/17841400420878464/token.js?userSecret=pwftnvg2rqrinzvl53kyd'></script>
-  <script type="text/javascript" src="js/instafeed.js"></script>
+    <!-- Instafeed -->
+    <script src="https://ig.instant-tokens.com/users/83285186-a7f7-425b-b444-219f40f98f9a/instagram/17841400420878464/token.js?userSecret=pwftnvg2rqrinzvl53kyd"></script>
+    <script type="text/javascript" src="js/instafeed.js"></script>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LK7CR8PPLX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-LK7CR8PPLX"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-    gtag('config', 'G-LK7CR8PPLX');
-  </script>
-</head>
+      gtag("config", "G-LK7CR8PPLX");
+    </script>
+  </head>
 
-<body>
-  <div class="container">
-    <header id='navbar'>
-      <a href="#" class="logo">Hair <span>by superkate!</span></a>
-      <ul>
-        <li><a href="#" onclick="firstSlide();menuToggle();" class="active">Home</a></li>
-        <li><a href="https://www.instagram.com/hairbysuperkate/">Instagram</a></li>
-      </ul>
-      <span class="menuIcon" onclick="menuToggle()"></span>
-    </header>
-    <div class="content">
-      <div class="bannerText" id="slideshowText">
-        <div class="active">   
-          <h2>Licensed Barber and Colorist</h2>
-          <h5>(fully vaccinated in May) </h5><br>
+  <body>
+    <div class="container">
 
-          <p>
-          I'm currently setting up my studio near Old Town in Eureka, CA! <br><br>
-          If you would like to be contacted for an appointment when my books open please let me know: <br></p>
+      <!-- Hair By Superkate Header -->
+      <header id="navbar">
+        <a href="#" class="logo">Hair <span>by superkate!</span></a>
 
-          <form id="emailForm" action="https://formspree.io/f/xwkakynz" method="post">
-            <label for="wonderful_person">Name</label><br>
-            <input type="text" name="wonderful_person" id="wonderful_person"><br>
-            <label for="happy_email">Email</label><br>
-            <input type="text" name="happy_email" id="happy_email"><br>
-            <label for="friendly_phone">Phone</label><br>
-            <input type="text" name="friendly_phone" id="friendly_phone"><br>
-            <label for="services_desired">Service(s) Desired</label><br>
-            <textarea name="services_desired" id="services_desired" rows="2" columns="1"></textarea><br><br>
-            <input type="submit" value="Hit Me Up!" id="beautiful_button">
-          </form>
-
-        </div>
-      </div>
-      
-      <!-- Instafeed -->
-      <div id="instafeed"></div>
-      <script type="text/javascript">
-          var feed = new Instafeed({
-            accessToken: InstagramToken
-          });
-          feed.run();
-      </script>
-      </div>
+        <!-- Icons -->
       <div class="icons">
         <ul class="social_media">
-          <li><a href="https://www.facebook.com/rainbowsbysuperkate/"><img src="images/facebook_logo.png"></a></li>
-          <li><a href="https://twitter.com/superkate999"><img src="images/twitter_logo.png"></a></li>
-          <li><a href="https://www.instagram.com/hairbysuperkate/"><img src="images/instagram_logo.png"></a></li>
-        </ul>
-        <ul class="controls">
-          <li><a><img src="images/back_arrow.png" onclick="prevSlide()"></a></li>
-          <li><a><img src="images/front_arrow.png" onclick="nextSlide()"></a></li>
+          <li>
+            <a href="https://www.facebook.com/rainbowsbysuperkate/"
+              ><img src="images/facebook_logo.png"
+            /></a>
+          </li>
+          <li>
+            <a href="https://twitter.com/superkate999"
+              ><img src="images/twitter_logo.png"
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/hairbysuperkate/"
+              ><img src="images/instagram_logo.png"
+            /></a>
+          </li>
         </ul>
       </div>
-    </div>
-         <!-- Instafeed 
+      </header>
+
+      <!-- Content-->
+      <div class="content">
+
+        <div id="welcome_text">
+            <h2>Licensed Barber and Colorist</h2>
+            <h5>(fully vaccinated in May)</h5>
+            <br>
+
+            <p>
+              I'm currently setting up my studio near Old Town in Eureka, CA!
+              <br><br>
+              If you would like to be contacted for an appointment when my books
+              open please let me know: <br>
+            </p>
+        </div>
+
+        <div id="happy_form">
+        <!-- Happy Form-->
+          <form action="https://formspree.io/f/xwkakynz" method="post">
+            <label for="wonderful_name">Name</label><br>
+            <input type="text" name="wonderful_name" id="wonderful_name" /><br>
+            <label for="happy_email">Email</label><br>
+            <input type="text" name="happy_email" id="happy_email" /><br>
+            <label for="friendly_phone">Phone</label><br>
+            <input type="text" name="friendly_phone" id="friendly_phone" /><br>
+            <label for="services_desired">Service(s) Desired</label><br>
+            <textarea name="services_desired" id="services_desired" rows="2" columns="1" ></textarea>
+            <br>
+            <br>
+            <input type="submit" value="Hit Me Up!" id="beautiful_button" />
+          </form>
+        </div>
+
+        <div id="instafeed">feed.</div>
+      </div>  <!-- End Content-->
+    </div>  <!-- End Container-->
+    
+    <!-- Scripts -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+    <!-- Instafeed -->
     <script type="text/javascript">
-      var slideshow = document.getElementById('slideshow');
-      var slides = slideshow.getElementsByTagName('img');
-      var index = 0;
-
-      function nextSlide() {
-        slides[index].classList.remove('active');
-        index = (index + 1) % slides.length;
-        slides[index].classList.add('active');
-      }
-      function prevSlide() {
-        slides[index].classList.remove('active');
-        index = (index - 1 + slides.length) % slides.length;
-        slides[index].classList.add('active');
-      }
-      function firstSlide() {
-        slides[index].classList.remove('active');
-        index = 0;
-        slides[index].classList.add('active');
-      }
-      function lastSlide() {
-        slides[index].classList.remove('active');
-        index = slides.length - 1;
-        slides[index].classList.add('active');
-      }
-
-      var slideshowText = document.getElementById('slideshowText');
-      var i = 0;
-      -->
-      <script>
-      function menuToggle() {
-        var nav = document.getElementById('navbar')
-        nav.classList.toggle('active')
-      }
-
+     var feed = new Instafeed({
+        accessToken: InstagramToken,
+        limit: 12,
+        mock: true,
+        template: '<a href="{{link}}"><img title="{{caption}}" src="{{image}}" /></a>',
+        after: function () {
+          $('#instafeed').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 20000,
+          })
+        },
+      });    
+      feed.run();
     </script>
   </body>
-
 </html>

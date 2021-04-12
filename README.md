@@ -1,3 +1,7 @@
 This is the website for the fabulous hairstylist superkate!
 
-Edits from Jack and Silas
+
+Thanks to:
+
+Slick: https://github.com/kenwheeler/slick/
+Instafeed: https://github.com/stevenschobert/instafeed.js/

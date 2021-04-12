@@ -26,7 +26,10 @@
     </script>
   </head>
 
+  <!-- Body -->
   <body>
+    <div class="background"></div>
+    <!--Container-->
     <div class="container">
 
       <!-- Hair By Superkate Header -->
@@ -34,63 +37,60 @@
         <a href="#" class="logo">Hair <span>by superkate!</span></a>
 
         <!-- Icons -->
-      <div class="icons">
-        <ul class="social_media">
-          <li>
-            <a href="https://www.facebook.com/rainbowsbysuperkate/"
-              ><img src="images/facebook_logo.png"
-            /></a>
-          </li>
-          <li>
-            <a href="https://twitter.com/superkate999"
-              ><img src="images/twitter_logo.png"
-            /></a>
-          </li>
-          <li>
-            <a href="https://www.instagram.com/hairbysuperkate/"
-              ><img src="images/instagram_logo.png"
-            /></a>
-          </li>
-        </ul>
-      </div>
-      </header>
+        <div class="icons">
+          <ul class="social_media">
+            <li>
+              <a href="https://www.facebook.com/rainbowsbysuperkate/"
+                ><img src="images/facebook_logo.png"
+              /></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/superkate999"
+                ><img src="images/twitter_logo.png"
+              /></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/hairbysuperkate/"
+                ><img src="images/instagram_logo.png"
+              /></a>
+            </li>
+          </ul>
+        </div> <!-- End Icons-->
+      </header> <!-- End Navbar -->
+      <!-- Centerpiece-->
+      <div id="centerpiece">
 
-      <!-- Content-->
-      <div class="content">
-
-        <div id="welcome_text">
+        <!-- Form Side-->
+        <div id="form_side">
+          <!-- Welcome Text -->
+          <div id="welcome_text">
             <h2>Licensed Barber and Colorist</h2>
             <h5>(fully vaccinated in May)</h5>
-            <br>
-
-            <p>
-              I'm currently setting up my studio near Old Town in Eureka, CA!
-              <br><br>
-              If you would like to be contacted for an appointment when my books
-              open please let me know: <br>
-            </p>
-        </div>
-
-        <div id="happy_form">
-        <!-- Happy Form-->
-          <form action="https://formspree.io/f/xwkakynz" method="post">
-            <label for="wonderful_name">Name</label><br>
-            <input type="text" name="wonderful_name" id="wonderful_name" /><br>
-            <label for="happy_email">Email</label><br>
-            <input type="text" name="happy_email" id="happy_email" /><br>
-            <label for="friendly_phone">Phone</label><br>
-            <input type="text" name="friendly_phone" id="friendly_phone" /><br>
-            <label for="services_desired">Service(s) Desired</label><br>
-            <textarea name="services_desired" id="services_desired" rows="2" columns="1" ></textarea>
-            <br>
-            <br>
-            <input type="submit" value="Hit Me Up!" id="beautiful_button" />
-          </form>
-        </div>
-
-        <div id="instafeed">feed.</div>
-      </div>  <!-- End Content-->
-    </div>  <!-- End Container-->
+            <p>I'm currently setting up my studio near Old Town in Eureka, CA!</p>
+            <p>If you would like to be contacted for an appointment when my books
+              open please let me know!</p>
+          </div> <!-- End Welcome Text-->
+          
+          <!-- Happy Form-->
+          <div id="happy_form">
+            <form action="https://formspree.io/f/xwkakynz" method="post">
+              <label for="wonderful_name">Name</label><br>
+              <input type="text" name="wonderful_name" id="wonderful_name" /><br>
+              <label for="happy_email">Email</label><br>
+              <input type="text" name="happy_email" id="happy_email" /><br>
+              <label for="friendly_phone">Phone</label><br>
+              <input type="text" name="friendly_phone" id="friendly_phone" /><br>
+              <label for="services_desired">Service(s) Desired</label><br>
+              <textarea name="services_desired" id="services_desired" rows="2" columns="1" ></textarea>
+              <br>
+              <br>
+              <input type="submit" value="Hit Me Up!" id="beautiful_button" />
+            </form>
+          </div> <!-- End Happy Form -->
+        </div>  <!-- End Form Side-->
+        <div id="instafeed"></div> <!--Instafeed -->
+      </div>  <!-- End Centerpiece-->
+    </div> <!-- End Container -->
     
     <!-- Scripts -->
     <script src="js/jquery-3.6.0.min.js"></script>
@@ -99,7 +99,7 @@
     <script type="text/javascript">
      var feed = new Instafeed({
         accessToken: InstagramToken,
-        limit: 12,
+        limit: 24,
         template: '<a href="{{link}}"><img title="{{caption}}" src="{{image}}" /></a>',
       });    
       feed.run();

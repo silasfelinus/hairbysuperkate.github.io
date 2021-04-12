@@ -109,7 +109,7 @@ header .logo span
 .icons .social_media li img
 {
   display: inline-block;
-  max-height: 24px;
+  max-height: 34px;
   transition: 0.5s ease-in-out;
 }
 .icons .social_media li:hover img
@@ -117,31 +117,38 @@ header .logo span
   transform: translateY(-10px);
 }
 
-#centerpiece {
-  display: flex;
-  margin-top: 10px;
-  margin-right: 10px;
-  margin-left: 10px;
+#instafeed {
+  top: 0px;
+  left: 0px;
+  display: block;
+}
+#instafeed a {
+  position: relative;
+  padding: 40px;
+  opacity: 1;
+  text-align: left;
+}
+#instafeed a img {
+  width: 350px;
+  height: 350px;
 }
 
-/* Form Side */
-#form_side
+/* Welcome Form */
+#welcome_form
 {
   float: left;
   display: block;
-  justify-content: space-between;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 40px;
   position: relative;
   max-width: 400px;
-  margin-right: 10px;
+  margin-right: 50px;
 }
-#form_side div
+#welcome_form div
 {
   display: block;
 }
-
-#form_side h2
+#welcome_form h2
 {
   font-size: 24px;
   text-transform: uppercase;
@@ -150,7 +157,7 @@ header .logo span
   color: var(--text_color_1);
   text-align: center;
 }
-#form_side h5
+#welcome_form h5
 {
   font-size: 14px;
   font-weight: 800;
@@ -158,14 +165,14 @@ header .logo span
   color: var(--text_color_1);
   text-align: center;
 }
-#form_side p
+#welcome_form p
 {
   font-size: 18px;
   color: var(--text_color_2);
   line-height: 1.8em;
   margin: 20px 0;
 }
-#form_side a
+#welcome_form a
 {
   position: relative;
   display: inline-block;
@@ -181,7 +188,6 @@ header .logo span
 #happy_form {
   position: relative,
 }
-
 #happy_form input {
   font-size: 18px;
   color:  var(--text_color_2);
@@ -202,27 +208,3 @@ header .logo span
   top: -15px;
 }
 
-#instafeed {
-  position: relative;
-  top: 0px;
-  left: 100px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-#instafeed a {
-  position: relative;
-
-  top: 0px;
-  right: 10px;
-  opacity: 1;
-
-}
-
-#instafeed a img {
-  width: 300px;
-  height: 300px;
-
-}

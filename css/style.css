@@ -118,7 +118,7 @@ header .logo span
 }
 
 #centerpiece {
-  display: relative;
+  display: flex;
   margin-top: 10px;
   margin-right: 10px;
   margin-left: 10px;
@@ -192,7 +192,7 @@ header .logo span
   font-size: 18px;
   color:  var(--text_color_2);
   height: 100px;
-  width: 50%;
+  width: 350px;
 }
 #happy_form label {
   color:  var(--text_color_3);
